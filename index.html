@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+  maximum-scale=5" />
+
+    <link rel="icon" href="devchallenges.png" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://devchallenges.io/" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Devchallenges</title>
+  </head>
+  <body>
+    <header class="Header">
+      <h1>The creative crew</h1>
+      <div class="Header_who">
+        <h2>Who we are</h2>
+        <p>
+          We are team of creatively diverse. driven. innovative individuals
+          working in various locations from the world.
+        </p>
+      </div>
+    </header>
+    <main class="Main">
+      <section id="Main-Section" class="Main-Section"></section>
+    </main>
+    <footer class="Footer">
+      <small>
+        created by
+        <a href="https://devchallenges.io/portfolio/XxtbmfxX">Toro</a> -
+        <a href="https://devchallenges.io">dev.Challenges.io</a>
+      </small>
+    </footer>
+
+    <script>
+      const Main = document.getElementById("Main-Section");
+
+      fetch("./content.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const cont1 = data.container1;
+          cont1.forEach((e) => {
+            let article = document.createElement("div");
+            article.className = "Main-Article";
+            article.innerHTML = `
+          
+
+            <div class="Main-Article-top">
+            <div class="Image" style="background-image: url(${e.image});"></div>
+            <small id="position">${e.position}</small>
+          </div>
+          <figcaption>${e.name}</figcaption>
+        
+            `;
+
+            Main.appendChild(article);
+          });
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "container1": [
+    {
+      "name": "Bill Mohoney",
+      "position": "product owner",
+      "image": "./photo1.png"
+    },
+    {
+      "name": "Saba Cabrera",
+      "position": "art director",
+      "image": "./photo2.png"
+    },
+    {
+      "name": "Shan Le",
+      "position": "tech lead",
+      "image": "./photo3.png"
+    },
+    {
+      "name": "Skyla Lu",
+      "position": "ux designer",
+      "image": "./photo4.png"
+    },
+    {
+      "name": "Grif Richards",
+      "position": "developer",
+      "image": "./photo5.png"
+    },
+    {
+      "name": "Stan John",
+      "position": "developer",
+      "image": "./photo6.png"
+    }
+  ]
+}
